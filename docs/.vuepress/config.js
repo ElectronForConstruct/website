@@ -12,6 +12,14 @@ module.exports = {
         text: 'Guide',
         link: '/intro/',
       },
+      {
+        text: 'Github',
+        link: 'https://github.com/ElectronForConstruct',
+      },
+      {
+        text: 'Missing something ?',
+        link: 'https://github.com/ElectronForConstruct/website/issues',
+      },
     ],
     sidebar: [
       {

@@ -63,7 +63,7 @@ To preview a Construct 3 project, you need to use the "Remote Preview" feature, 
 Start by opening a project and select "Remote Preview" under the preview menu. \
 A small window with a QR code or n URL appear. \
 Copy this url. \
-Within the `e4c` cli, select "Preview Construct 3" and paste the URL previously copied. \
+Within the `e4c` cli, select "Preview Construct 3" and paste the URL previously copied.
 
 <video width="100%" controls>
   <source src="/c3_preview.mp4" type="video/mp4">
