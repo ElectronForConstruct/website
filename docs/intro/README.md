@@ -13,4 +13,5 @@ The second part is a cli-powered app to easily manage, preview or build your pro
 
 ## Why ?
 For fun. \
-I saw too many people complaining about slow updates, small amount of features or bugs with NW.js. I love Electron, so I took the opportunity to help people 
+I saw too many people complaining about slow updates, small amount of features or bugs with NW.js. I love Electron, so I took the opportunity to help people.\
+An other reason I chosed to make this is that Construct 3 doesn't give you the ability to preview your game using using NW.js. With E4C you can preview your game from C3 within Electron.
