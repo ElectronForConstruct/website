@@ -18,7 +18,7 @@ First, you need to export your project using C2.
 
 First, you need to export your project using C3.
 
-![Export dialog](/)
+![Export dialog](/export_dialog_c3.png)
 
 1. Open the "Export" dialog
 2. Select **HTML5**
