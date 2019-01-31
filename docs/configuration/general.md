@@ -1,7 +1,7 @@
 # General
 
 Configuration file is located inside your project's folder and is called `config.js`.\
-It's a javascript file that have the same format as a simple JSON file but advanced users have the possibility to include dynamic configurations. \
+It's a javascript file that have the same format as a simple JSON file but advanced users have the possibility to include dynamic configurations.
 
 The default configuration looks like:
 

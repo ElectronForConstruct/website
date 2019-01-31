@@ -17,14 +17,10 @@ To add a new flag, simple do the following:
 ```js
 {
   switches: [
-    'disable-http-cache',
+    '--disable-http-cache',
   ],  
 }
 ```
-
-::: tip
-Note that flags are added without the preceding double dashes
-:::
 
 ## Flags with arguments
 
