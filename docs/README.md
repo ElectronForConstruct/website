@@ -25,3 +25,7 @@ yarn global add @electronforconstruct/cli
 # start hacking
 e4c
 ```
+
+::: tip NOTE
+YOU MUST OWN A C2 OR C3 LICENSE TO USE THIS TOOL. IT IS NOT ALLOWED TO EXPORT GAMES TO DESKTOP WITH THE FREE VERSION.
+:::

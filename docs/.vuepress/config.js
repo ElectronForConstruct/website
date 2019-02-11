@@ -13,6 +13,10 @@ module.exports = {
         link: '/intro/',
       },
       {
+        text: 'Chat with us!',
+        link: 'https://spectrum.chat/electron4construct'
+      },
+      {
         text: 'Github',
         link: 'https://github.com/ElectronForConstruct',
       },
@@ -34,6 +38,8 @@ module.exports = {
       {
         title   : 'Advanced usage',
         children: [
+          ['/advanced/', "Introduction"],
+          ['/advanced/c3-steam', "Steam integration with Construct 3"]
         ],
       },
       {
@@ -56,6 +62,19 @@ module.exports = {
         children: [
         ],
       },
+      {
+        title   : 'FAQ',
+        children: [
+        ],
+      },
     ],
   },
+  plugins: [
+    [ 
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-85914929-3'
+      }
+    ]
+  ]
 };
