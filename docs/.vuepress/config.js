@@ -1,6 +1,11 @@
 module.exports = {
   title: 'ElectronForConstruct',
   description: 'A documentation website about the ElectronForContruct tool. Install it now and get the best performances!',
+  head: [
+    ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }],
+    ['script', {},
+     '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });'],
+  ],
   themeConfig: {
     displayAllHeaders: true,
     nav: [
