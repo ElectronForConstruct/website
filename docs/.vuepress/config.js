@@ -38,8 +38,8 @@ module.exports = {
       {
         title   : 'Advanced usage',
         children: [
-          ['/advanced/', "Introduction"],
-          ['/advanced/c3-steam', "Steam integration with Construct 3"]
+          // ['/advanced/', "Introduction"],
+          // ['/advanced/c3-steam', "Steam integration with Construct 3"]
         ],
       },
       {
