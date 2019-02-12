@@ -40,13 +40,13 @@ module.exports = {
           ['/intro/using-the-module', 'Using the module'],
         ],
       },
-      // {
-      // title: 'Advanced usage',
-      // children: [
-      // ['/advanced/', "Introduction"],
-      // ['/advanced/c3-steam', "Steam integration with Construct 3"]
-      // ],
-      //},
+      {
+        title: 'Advanced usage',
+        children: [
+          // ['/advanced/', "Introduction"],
+          ['/advanced/', "Steam integration with Construct 3"]
+        ],
+      },
       {
         title: 'Configuration',
         children: [
