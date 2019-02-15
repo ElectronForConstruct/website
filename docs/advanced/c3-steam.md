@@ -98,7 +98,7 @@ If you are familiar with Javascript development, you can make calls to Greenwork
 
 See [example project](/GreenWorksTest.c3p) for more information.
 
-::: warn NOTE
+::: warning NOTE
 Currently, no tests were made for Construct 2
 :::
 
