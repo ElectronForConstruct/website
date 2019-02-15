@@ -7,6 +7,7 @@
 2. If you're on Windows, install the required tools. Either: 
     - Visual Studio Build Tools and Python 2.7
     - `npm install --global --production windows-build-tools`
+        - Must run cmd prompt or Power shell as Administator
 
 3. Add Greenworks node module:
     - `npm install --save --ignore-scripts git+https://github.com/greenheartgames/greenworks.git`
@@ -19,19 +20,19 @@
 5. Rebuild greenworks for the current Electron version:
     - `.\node_modules\.bin\electron-rebuild` 
 
-6. Create the require Steam files:
-    - Create `steam_appid.txt` with `480` as content. 480 is a test ID.
+6. Create the required Steam files:
+    - Create `steam_appid.txt` with `480` as content. 480 is a test ID (SpaceWar game on Steam)
 
 ## Preview
 
-While previewing usin `e4c`, you will now have access to Greenworks features. Thought, the overlay will only work as long as you launch Electron through Steam.
+While previewing usin `e4c`, you will now have access to Greenworks features. Though, the overlay will only work as long as you launch Electron through Steam.
 
 To do so, you need to make use of the `preview` executable located in your app. Go to your steam app, add a **non-steam** game and select this executable.
 Right click on the entry, go to properties, click on **Set Set Launch Options**. If using Construct 3, enter the remote review url, otherwise enter the Construct 2 regular preview url. Finally, launch your app from steam to have all the benefits: Testing greenworks, live-reload and overlay.
 
 ## The overlay is not working!
 
-Sometimes, you need to configure more thing for the oerlay to work.
+Sometimes, you need to configure more things for the overlay to work.
 In `config.js`, there is a special key `switches`, wich allow you to pass different Chrome/Electron switches to your app. In our case: 
 
 ```json
@@ -45,7 +46,7 @@ In `config.js`, there is a special key `switches`, wich allow you to pass differ
 ```
 
 ::: tip NOTE
-In the case of not moving rendering, the overlay will be buggy. Place a small (1x1 px) rotating sprite, for example in a corner. That will fix the overlay being not corectly responsive.
+In the case of not moving or rendering every frame, the overlay will be buggy. Place a small (1x1 px) rotating sprite, for example in a corner. That will fix the overlay being not corectly responsive.
 :::
 
 For more infos on switches, head over to the Electron [documentation]().
@@ -97,7 +98,7 @@ If you are familiar with Javascript development, you can make calls to Greenwork
 
 See [example project](/GreenWorksTest.c3p) for more information.
 
-::: warn NOTE
+::: warning NOTE
 Currently, no tests were made for Construct 2
 :::
 
