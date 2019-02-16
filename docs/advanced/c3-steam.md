@@ -78,49 +78,49 @@ You can now use the regular `build` command from `e4c`.
     1. Download the addon
     2. Rename the extension to zip
     3. Extract it
-    4. Edit `c3runtime/domSide.js and update the top of the script to match this:
-```javascript
-"use strict";
+    4. Edit `c3runtime/domSide.js` and update the top of the script to match this:
+	```javascript
+	"use strict";
 
-{
-	const DOM_COMPONENT_ID = "greenworks";
-
-	const HANDLER_CLASS = class GreenworksDOMHandler extends DOMHandler
 	{
-		constructor(iRuntime)
+		const DOM_COMPONENT_ID = "greenworks";
+
+		const HANDLER_CLASS = class GreenworksDOMHandler extends DOMHandler
 		{
-			super(iRuntime, DOM_COMPONENT_ID);
-			
-			this._isNWjs = (iRuntime.GetExportType() === "nwjs");
-			var userAgent = navigator.userAgent.toLowerCase(); // CHANGE
-			this._isElectron = (userAgent.indexOf(' electron/') > -1); // CHANGE
-			this._isAvailable = false;
-			
-			this._greenworks = null;
-			this._steamId = null;
-			
-			this.AddRuntimeMessageHandlers([
-				["load", e => this._Load(e)],
-				["activate-achievement", e => this._OnActivateAchievement(e)],
-				["activate-overlay", e => this._OnActivateOverlay(e)]
-			]);
-		}
-		
-		_Load(e)
-		{
-			if (this._isNWjs || this._isElectron) // CHANGE
+			constructor(iRuntime)
 			{
-				try {
-					if (this._isNWjs) // CHANGE
-					{ // CHANGE
-						this._greenworks = require("./greenworks"); // CHANGE
-					} else // CHANGE
-					{ // CHANGE
-						console.log("*** INFO *** domSide.js require(greenworks)"); // CHANGE
-						this._greenworks = require("greenworks"); // CHANGE
-						console.log("*** INFO *** domSide.js require(greenworks) result: "+this._greenworks); // CHANGE
-					} // CHANGE
-   ```
+				super(iRuntime, DOM_COMPONENT_ID);
+
+				this._isNWjs = (iRuntime.GetExportType() === "nwjs");
+				var userAgent = navigator.userAgent.toLowerCase(); // CHANGE
+				this._isElectron = (userAgent.indexOf(' electron/') > -1); // CHANGE
+				this._isAvailable = false;
+
+				this._greenworks = null;
+				this._steamId = null;
+
+				this.AddRuntimeMessageHandlers([
+					["load", e => this._Load(e)],
+					["activate-achievement", e => this._OnActivateAchievement(e)],
+					["activate-overlay", e => this._OnActivateOverlay(e)]
+				]);
+			}
+
+			_Load(e)
+			{
+				if (this._isNWjs || this._isElectron) // CHANGE
+				{
+					try {
+						if (this._isNWjs) // CHANGE
+						{ // CHANGE
+							this._greenworks = require("./greenworks"); // CHANGE
+						} else // CHANGE
+						{ // CHANGE
+							console.log("*** INFO *** domSide.js require(greenworks)"); // CHANGE
+							this._greenworks = require("greenworks"); // CHANGE
+							console.log("*** INFO *** domSide.js require(greenworks) result: "+this._greenworks); // CHANGE
+						} // CHANGE
+	```
     5. Rename it back to `.c3p`, zip it again and install it.
 - Create a Construct 3 project
 - Use the addon's ACEs to interact with Greenworks
