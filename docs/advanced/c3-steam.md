@@ -97,6 +97,40 @@ If you are familiar with Javascript development, you can make calls to Greenwork
 
 See [example project](/GreenWorksTest.c3p) for more information.
 
+One challenge is to make sure that greenworks module and associated libraries are found in the correct path for electron/node in the javascript files that are created for the project. As an example, this is what required to find the path across preview, built exe, etc.
+
+```javascript
+var greenworksElectron;
+
+// Depending on environment and electron build, the built greenworks will be at different
+// relative paths compared to init.js where it is launched from.
+try {
+    // if greenworks is installed in a node_modules folder and the path is available in resolve paths
+	console.log("require.resolve.paths(greenworks): "+require.resolve.paths('greenworks'));
+	// For debug, what is the DirName the current script is running in.
+	console.log("DirName: "+__dirname+" FileName: "+__filename);
+	console.log("Trying require('greenworks')");
+	// Try node_modules path via resolve path, if found, show the path
+	greenworksElectron = require('greenworks');
+	console.log("require.resolve(greenworks): "+require.resolve('greenworks'));
+	
+	} catch(e) {
+	  try {
+		// Try built exe relative path
+		console.log("Trying require('../../app.asar/node_modules/greenworks');");
+		greenworksElectron = require('../../app.asar/node_modules/greenworks');
+	  } catch (e) {
+		  try {
+			// Try e4c preview relative path
+			console.log("Trying require('../../../../../greenworks');");
+		  	greenworksElectron = require('../../../../../greenworks');
+		  } catch (e) {
+    			console.log("Fail require greenworks module: "+e);
+  			}
+		}
+	}
+```
+
 ::: warn NOTE
 Currently, no tests were made for Construct 2
 :::
