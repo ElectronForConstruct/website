@@ -9,5 +9,5 @@ This guide will help you getting started with Electron for Construct
 
 |           |              |
 | --------- | ------------ |
-| MikalDev  |              |
-| <a href=""> <img src="" alt="MikalDev" /> </a>
+| [MikalDev](https://github.com/MikalDev)  |              |
+| <a href="https://github.com/MikalDev"> <img height="32" src="https://avatars2.githubusercontent.com/u/33675273?s=400&v=4" alt="MikalDev" /> </a>
