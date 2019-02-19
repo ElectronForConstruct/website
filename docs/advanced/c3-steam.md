@@ -1,4 +1,5 @@
 # Steam integration with Construct 3
+> [BETA] - Written by MikalDev
 
 ## Prerequisites
 
@@ -7,7 +8,7 @@
 2. If you're on Windows, install the required tools. Either: 
     - Visual Studio Build Tools and Python 2.7
     - `npm install --global --production windows-build-tools`
-        - Must run cmd prompt or Power shell as Administator for this install
+        - Must run cmd prompt or PowerShell as Administator
     - If not already installed, install [git](https://git-scm.com/download/win)
 
 3. Add Greenworks node module:
