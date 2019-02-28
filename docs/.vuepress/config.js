@@ -2,6 +2,7 @@ module.exports = {
   title: 'ElectronForConstruct',
   description: 'A documentation website about the ElectronForContruct tool. Install it now and get the best performances!',
   head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }],
     ['script', {},
      '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });'],
@@ -22,11 +23,15 @@ module.exports = {
         link: 'https://spectrum.chat/electron4construct'
       },
       {
+        text: 'Vote for new features',
+        link: 'https://electronforconstruct.featureupvote.com'
+      },
+      {
         text: 'Github',
         link: 'https://github.com/ElectronForConstruct',
       },
       {
-        text: 'Missing something ?',
+        text: 'Found an issue ?',
         link: 'https://github.com/ElectronForConstruct/website/issues',
       },
     ],
