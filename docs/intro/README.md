@@ -2,7 +2,7 @@
 
 ## What is `ElectronForConstruct`
 
-`ElectronForConstruct` (**E4C**) is a set of tools to help you develop your game using the [Electron](https://github.com/electron/electron) framework instead of [NW.js](https://github.com/nwjs/nw.js/) (that is provided by default with any Construct version) \
+`ElectronForConstruct` (**efc**) is a set of tools to help you develop your game using the [Electron](https://github.com/electron/electron) framework instead of [NW.js](https://github.com/nwjs/nw.js/) (that is provided by default with any Construct version) \
 It appears that Electron itself, while doing the same job as NW.js, do it better, faster and safer. \
 [Here is a reference comparing Electron and NW.js](https://github.com/ElectronForConstruct/template/blob/develop/electron-advantages.md)
 
@@ -14,4 +14,4 @@ The second part is a cli-powered app to easily manage, preview or build your pro
 ## Why ?
 For fun. \
 I saw too many people complaining about slow updates, small amount of features or bugs with NW.js. I love Electron, so I took the opportunity to help people.\
-An other reason I chosed to make this is that Construct 3 doesn't give you the ability to preview your game using using NW.js. With E4C you can preview your game from C3 within Electron.
+An other reason I chosed to make this is that Construct 3 doesn't give you the ability to preview your game using using NW.js. With efc you can preview your game from C3 within Electron.

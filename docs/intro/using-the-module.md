@@ -9,11 +9,11 @@ The module is extremely easy to use:
 All the following demonstrations will be made using cmder on Windows 10
 
 ## Creating the project
-After the installation of the module using the `npm` command, it was registered a new command inside your terminal: `e4c` \
+After the installation of the module using the `npm` command, it was registered a new command inside your terminal: `efc` \
 Try now by yourself:
-- Create an empty directory
+- Create an empty directory e.g. ElectronForConstruct
 - Open a console and navigate to your freshly created directory
-- Type `e4c` and watch the magic happening
+- Type `efc` and watch the magic happening
 
 If the module does not detect the current folder as a project, it prompt you to create one
 
@@ -31,7 +31,7 @@ If not already done manually, the module will help you:
 Your browser does not support the video tag.
 </video>
 
-After you folder is fully ready, the module will start showing its features:
+After your folder is fully ready, the module will start showing its features:
 
 <video width="100%" controls>
   <source src="/full_options.mp4" type="video/mp4">
@@ -63,7 +63,7 @@ To preview a Construct 3 project, you need to use the "Remote Preview" feature, 
 Start by opening a project and select "Remote Preview" under the preview menu. \
 A small window with a QR code or n URL appear. \
 Copy this url. \
-Within the `e4c` cli, select "Preview Construct 3" and paste the URL previously copied.
+Within the `efc` cli, select "Preview Construct 3" and paste the URL previously copied.
 
 <video width="100%" controls>
   <source src="/c3_preview.mp4" type="video/mp4">

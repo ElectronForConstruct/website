@@ -1,15 +1,18 @@
 module.exports = {
-  title: 'ElectronForConstruct',
+  title      : 'ElectronForConstruct',
   description: 'A documentation website about the ElectronForContruct tool. Install it now and get the best performances!',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }],
-    ['script', {},
-     '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });'],
+  head       : [
+    [ 'link', {
+      rel : 'icon',
+      href: '/favicon.ico',
+    } ],
+    [ 'script', { src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' } ],
+    [ 'script', {},
+      '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });' ],
   ],
   themeConfig: {
     displayAllHeaders: true,
-    nav: [
+    nav              : [
       {
         text: 'Home',
         link: '/',
@@ -20,11 +23,11 @@ module.exports = {
       },
       {
         text: 'Chat with us!',
-        link: 'https://spectrum.chat/electron4construct'
+        link: 'https://spectrum.chat/electron4construct',
       },
       {
         text: 'Vote for new features',
-        link: 'https://electronforconstruct.featureupvote.com'
+        link: 'https://electronforconstruct.featureupvote.com',
       },
       {
         text: 'Github',
@@ -35,56 +38,62 @@ module.exports = {
         link: 'https://github.com/ElectronForConstruct/website/issues',
       },
     ],
-    sidebar: [
+    sidebar          : [
       {
-        title: 'Guide',
+        title   : 'Guide',
         children: [
-          ['/intro/', 'Introduction'],
-          ['/intro/getting-started', 'Getting Started'],
+          [ '/intro/', 'Introduction' ],
+          [ '/intro/getting-started', 'Getting Started' ],
 
-          ['/intro/using-the-module', 'Using the module'],
+          [ '/intro/using-the-module', 'Using the module' ],
         ],
       },
       {
-        title: 'Advanced usage',
+        title   : 'Advanced usage',
         children: [
           // ['/advanced/', "Introduction"],
-          ['/advanced/c3-steam', "Steam integration with Construct 3"]
+          [ '/advanced/c3-steam', 'Steam integration with Construct 3' ],
         ],
       },
       {
-        title: 'Configuration',
+        title   : 'Configuration',
         children: [
-          ['/configuration/', 'Introduction'],
-          ['/configuration/general', 'General'],
-          ['/configuration/flags', 'Flags'],
-          ['/configuration/build', 'Build'],
+          [ '/configuration/', 'Introduction' ],
+          [ '/configuration/general', 'General' ],
+          [ '/configuration/flags', 'Flags' ],
+          [ '/configuration/build', 'Build' ],
         ],
       },
       {
-        title: 'Build',
+        title   : 'Build',
         children: [
-          ['/build/', 'Building your project'],
+          [ '/build/', 'Introduction' ],
+          [ '/build/building', 'Building your project' ],
         ],
       },
-      // {
-      //   title: 'Editor plugins',
-      //   children: [
-      //   ],
-      // },
-      // {
-      //   title: 'FAQ',
-      //   children: [
-      //   ],
-      // },
+      {
+        title   : 'Plugins',
+        children: [
+          [ '/plugins/', 'Introduction' ],
+          [ '/plugins/using-plugins', 'Using plugins' ],
+          [ '/plugins/sdk', 'Using the SDK' ],
+          [ '/plugins/available-plugins', 'Available plugins' ],
+          [ '/plugins/plugin-efc-itch', '@electronforconstruct/plugin-efc-itch' ],
+          [ '/plugins/plugin-efc-greenworks', '@electronforconstruct/plugin-efc-greenworks' ],
+        ],
+      },
+//      {
+//        title   : 'FAQ',
+//        children: [],
+//      },
     ],
   },
-  plugins: [
+  plugins    : [
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'UA-85914929-3'
-      }
-    ]
-  ]
+        'ga': 'UA-85914929-3',
+      },
+    ],
+  ],
 };

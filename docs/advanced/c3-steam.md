@@ -27,7 +27,7 @@
 
 ## Preview
 
-While previewing usin `e4c`, you will now have access to Greenworks features. Though, the overlay will only work as long as you launch Electron through Steam.
+While previewing usin `efc`, you will now have access to Greenworks features. Though, the overlay will only work as long as you launch Electron through Steam.
 
 To do so, you need to make use of the `preview` executable located in your app. Go to your steam app, add a **non-steam** game and select this executable.
 Right click on the entry, go to properties, click on **Set Set Launch Options**. If using Construct 3, enter the remote review url, otherwise enter the Construct 2 regular preview url. Finally, launch your app from steam to have all the benefits: Testing greenworks, live-reload and overlay.
@@ -70,7 +70,7 @@ Before building, you need to add some properties to the `config.js` file. Under 
 
 In the contrary, [`extraFiles`](https://www.electron.build/configuration/contents.html#extrafiles) will tell the build to automatically include the `steam_appid.txt` file located at the root of the folder.
 
-You can now use the regular `build` command from `e4c`.
+You can now use the regular `build` command from `efc`.
 
 ## Using greenworks
 
@@ -166,7 +166,7 @@ try {
 		greenworksElectron = require('../../app.asar/node_modules/greenworks');
 	  } catch (e) {
 		  try {
-			// Try e4c preview relative path
+			// Try efc preview relative path
 			console.log("Trying require('../../../../../greenworks');");
 		  	greenworksElectron = require('../../../../../greenworks');
 		  } catch (e) {
