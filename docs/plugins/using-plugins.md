@@ -20,7 +20,7 @@ Once installed, you also need to enable it. To do so, use the `plugin` key of th
 It is also an array of strings but take the id of the plugin you want to enable. To enable `@electronforconstruct/plugin-efc-itch` plugin, do:
 ```js
 {
-  plugin: [
+  plugins: [
 		'itch',
   ]
 }
