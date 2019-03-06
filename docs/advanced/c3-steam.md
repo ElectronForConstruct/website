@@ -41,8 +41,6 @@ In `config.js`, there is a special key `switches`, wich allow you to pass differ
 {
     "switches": {
         "in-process-gpu",
-        "disable-transparency",
-        "disable-renderer-backgrounding"'
     }
 }
 ```
@@ -55,81 +53,92 @@ For more infos on switches, head over to the Electron [documentation]().
 
 ## Building
 
-Before building, you need to add some properties to the `config.js` file. Under the `build` key, specify:
-
-```json
-{
-    files: [
-        "!node_modules/greenworks/deps/**/*"
-    ],
-    extraFiles: [ "steam_appid.txt" ]
-}
+Update config.js for your app, example config.js used for GreengrindsExtendedTest project below:
 ```
+module.exports =
+{
+	"build" : {
+		"asarUnpack": [
+		"**/greenworks/**"
+		],
+ 
+		files: [
+			"!**/node_modules/greenworks/**",
+			"!**/node_modules/app-builder-bin/**",
+			"!**/node_modules/app-builder-lib/**",
+		],
+		appId: 'com.yourcompany.grindstest',
+		productName: 'GrindsTest',
+		copyright: 'Copyright © 2018 YourCompany',
+	},
+	"greenworks" : {
+		"steamId" : 480, // Your App ID (480 is a test app id)
+		"sdkPath" : "./node_modules/greenworks/deps/steamworks_sdk", // Path to downloaded SDK
+		"useLocalBuild" : true,
+	},
 
-[`files`](https://www.electron.build/configuration/contents.html#files) will tell the build to not include files under `!node_modules/greenworks/deps/**/*` (which are our dependencies only to build the addon, once done, we don"t need them anymore)
+	"switches": [
+		"in-process-gpu",
+	],
 
-In the contrary, [`extraFiles`](https://www.electron.build/configuration/contents.html#extrafiles) will tell the build to automatically include the `steam_appid.txt` file located at the root of the folder.
+	"project" : {
+		name: "GrindsTest",
+		description : "GrindsTest",
+		author : "YourCompany",
+		branch : "master",
+	},
 
-You can now use the regular `build` command from `efc`.
+	window: {
+		width: 800,
+		height: 600,
+		fullscreen: false,
+		frame: false,
+		transparent: false,
+		toolbar: false,
+		alwaysOnTop: false,
+	},
 
-## Using greenworks
+	developer: {
+		showConstructDevTools: true, // Turn off for build
+		autoClose: true,
+		autoReload: true,
+		showChromeDevTools: false,
+	},
 
-### The default Construt 3 plugin
-- [Download](https://www.construct.net/en/make-games/addons/84/greenworks) and modify the original addon to work: 
-    1. Download the addon
-    2. Rename the extension to zip
-    3. Extract it
-    4. Edit `c3runtime/domSide.js` and update the top of the script to match this:
-	```javascript
-	"use strict";
+	dependencies: [
+		'@electronforconstruct/plugin-efc-greenworks',
+	],
 
-	{
-		const DOM_COMPONENT_ID = "greenworks";
+	plugins: [
+		'greenworks',
+	]
+}
+;
+```
+```
+efc
+```
+- Install dependencies
 
-		const HANDLER_CLASS = class GreenworksDOMHandler extends DOMHandler
-		{
-			constructor(iRuntime)
-			{
-				super(iRuntime, DOM_COMPONENT_ID);
+Install greenworks libraries to top level of project in greenworks dir
+```
+efc
+```
+- Configure greenworks
 
-				this._isNWjs = (iRuntime.GetExportType() === "nwjs");
-				var userAgent = navigator.userAgent.toLowerCase(); // CHANGE
-				this._isElectron = (userAgent.indexOf(' electron/') > -1); // CHANGE
-				this._isAvailable = false;
 
-				this._greenworks = null;
-				this._steamId = null;
+Construct 3: Export GreengrindsExtendedTest project to html5
+Download, unzip project zip and put contents in GrindsTest\app
+```
+efc
+```
+- Build
 
-				this.AddRuntimeMessageHandlers([
-					["load", e => this._Load(e)],
-					["activate-achievement", e => this._OnActivateAchievement(e)],
-					["activate-overlay", e => this._OnActivateOverlay(e)]
-				]);
-			}
 
-			_Load(e)
-			{
-				if (this._isNWjs || this._isElectron) // CHANGE
-				{
-					try {
-						if (this._isNWjs) // CHANGE
-						{ // CHANGE
-							this._greenworks = require("./greenworks"); // CHANGE
-						} else // CHANGE
-						{ // CHANGE
-							console.log("*** INFO *** domSide.js require(greenworks)"); // CHANGE
-							this._greenworks = require("greenworks"); // CHANGE
-							console.log("*** INFO *** domSide.js require(greenworks) result: "+this._greenworks); // CHANGE
-						} // CHANGE
-	```
-    5. Rename it back to `.c3p`, zip it again and install it.
-- Create a Construct 3 project
-- Use the addon's ACEs to interact with Greenworks
+## Using greenworks, two methods
 
-::: tip Note
-The downsides of this method is that you are required to modify an original file for the build to work.
-The addon also have a very limited set of features.
-::: 
+### Use The Greengrinds plugin (includes example project)
+[Greengrinds Addon](https://www.construct.net/en/make-games/addons/244/greengrinds) 
 
 ### Valery Popoff's Javascript plugin
 If you are familiar with Javascript development, you can make calls to Greenworks yourself using the [official Greenworks documentation](https://github.com/greenheartgames/greenworks/tree/master/docs).
@@ -137,44 +146,9 @@ If you are familiar with Javascript development, you can make calls to Greenwork
 - Create a Construct 3 project
 - Download and install the [plugin](https://www.construct.net/en/make-games/addons/1/javascript)
 - Create a scriptfile e.g. greenworks.js
-- Instantiate greenworks object, create functions that you can call from JS plugin which in turn call greenworks APIs    
+- In greenwork.js, require the greenworks modules, instantiate greenworks object, create functions that you can call from JS plugin which in turn call greenworks APIs.
+- For some guidance in this see the official greenworks docs and unzip the Greengrinds plugin and look at the domSide.js code.
 -  Use `self.c2_callFunction` in JS to call back to C3 functions as needed (e.g. on data return or logging)   
-
-See [example project](/GreenWorksTest.c3p) for more information.
-
-One challenge is to make sure that greenworks module and associated libraries are found in the correct path for electron/node in the javascript files that are created for the project. As an example, this is what required to find the path across preview, built exe, etc.
-
-```javascript
-var greenworksElectron;
-
-// Depending on environment and electron build, the built greenworks will be at different
-// relative paths compared to init.js where it is launched from.
-try {
-    // if greenworks is installed in a node_modules folder and the path is available in resolve paths
-	console.log("require.resolve.paths(greenworks): "+require.resolve.paths('greenworks'));
-	// For debug, what is the DirName the current script is running in.
-	console.log("DirName: "+__dirname+" FileName: "+__filename);
-	console.log("Trying require('greenworks')");
-	// Try node_modules path via resolve path, if found, show the path
-	greenworksElectron = require('greenworks');
-	console.log("require.resolve(greenworks): "+require.resolve('greenworks'));
-	
-	} catch(e) {
-	  try {
-		// Try built exe relative path
-		console.log("Trying require('../../app.asar/node_modules/greenworks');");
-		greenworksElectron = require('../../app.asar/node_modules/greenworks');
-	  } catch (e) {
-		  try {
-			// Try efc preview relative path
-			console.log("Trying require('../../../../../greenworks');");
-		  	greenworksElectron = require('../../../../../greenworks');
-		  } catch (e) {
-    			console.log("Fail require greenworks module: "+e);
-  			}
-		}
-	}
-```
 
 
 ::: warning NOTE
