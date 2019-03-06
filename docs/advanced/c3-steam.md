@@ -53,10 +53,9 @@ For more infos on switches, head over to the Electron [documentation]().
 
 ## Building
 
-Update config.js for your app, example config.js used for GreengrindsExtendedTest project below:
-```
-module.exports =
-{
+Update `config.js` for your app like below (used for GreengrindsExtendedTest project):
+```json
+module.exports = {
 	"build" : {
 		"asarUnpack": [
 		"**/greenworks/**"
@@ -116,24 +115,20 @@ module.exports =
 ;
 ```
 ```
-efc
+efc install-deps
 ```
-- Install dependencies
 
 Install greenworks libraries to top level of project in greenworks dir
 ```
-efc
+efc greenworks
 ```
-- Configure greenworks
 
 
 Construct 3: Export GreengrindsExtendedTest project to html5
 Download, unzip project zip and put contents in GrindsTest\app
 ```
-efc
+efc build
 ```
-- Build
-
 
 ## Using greenworks, two methods
 
