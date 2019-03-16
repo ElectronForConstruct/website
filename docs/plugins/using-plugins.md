@@ -1,29 +1,23 @@
 # Using plugins
 
+::: warning
+This feature is not ready yet
+:::
+
 ## Installing a plugin
 
-There are several plugins available. You can find a complete list of plugins [here](/plugins/available-plugins).
+`efc` include its own plugin manager. 
+You can add, update or remove a plugin with respectively `efc plugin add`, `efc plugin remove` and `efc plugin update`
+Some plugins are also directly integrated inside `efc` and you only need to enable them.
 
-To add a plugin to your project, you can use the `dependencies` key of the `config.js`. \
-It takes an array of dependency. To add `@electronforconstruct/plugin-efc-itch` plugin, do: 
+To enable a plugin, use the `plugin` key of the `config.js`. \
+It is an array of strings that take the id of the plugin you want to enable. To enable the greenworks plugin, just add `greenworks` to the array:
 ```js
 {
-  dependencies: [
-		'@electronforconstruct/plugin-efc-itch',
+  plugin: [
+		'greenworks',
   ]
 }
 ```
 
-The use the `Update dependencies` cli command.
-
-Once installed, you also need to enable it. To do so, use the `plugin` key of the `config.js`. \
-It is also an array of strings but take the id of the plugin you want to enable. To enable `@electronforconstruct/plugin-efc-itch` plugin, do:
-```js
-{
-  plugins: [
-		'itch',
-  ]
-}
-```
-
-That's it! Run `efc` again and you should see the plugin available in the CLI.
+That's it! Run `efc` again and you should see the plugin available through the cli.

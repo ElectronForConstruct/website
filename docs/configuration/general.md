@@ -18,34 +18,54 @@ A complete list of options is available below.
 
 All available options for this key are located in the [Electron official documentation](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions).
 
-## dependencies
-When you update the template using the built-in command, the `package.json` file is overriden. If you want to have a custom dependency or override the version of an existing one, you can do it with this key. \
-It takes an array of strings of this format: 
-- `'electron'`: will install the lastest stable version of electron package from npm
-- `'electron@4.0.0'`: will install a specific version of electron package from npm
-
 ## plugins
-This key take an array of strings of plugin ids to enable. To know more about plugins, go to the [Plugins](/plugins/using-plugins) section.
+This key takes an array of strings of plugin ids to enable. To know more about plugins, go to the [Plugins](/plugins/using-plugins) section.
 
 
 ## developer
-- `showChromeDevTools`: boolean - true. Whether to open the chrome console developer tools on start.
-- `showConstructDevTools`: boolean - true. Whether to enable the construt developer tools on start.
-- `autoClose`: boolean - true. Whether to auto close the window when the construct 3 remote preview connection is lost. `showConstructDevTools` must be true.
-- `autoReload`: boolean - true. Whether to auto reload the window when the construct 3 remote preview project is updated. `showConstructDevTools` must be true.
+| key | type | default | description|
+|-----|------|---------|------------|
+| showChromeDevTools | boolean | *dev* | Whether to open the chrome console developer tools on start.
+| showConstructDevTools | boolean | *dev* | Whether to enable the construt developer tools on start.
+| autoClose | boolean | *dev* | Whether to auto close the window when the construct 3 remote preview connection is lost. `showConstructDevTools` must be true.
+| autoReload | boolean | *dev* | Whether to auto reload the window when the construct 3 remote preview project is updated. `showConstructDevTools` must be true.
+| __**overlay**__ | | | |
+| .position | {top\|bottom}-{left\|right} | null | xxx |
+| .content | string/html | null | xxx |
 
 
 ## project
-- `name`: string - 'My name'. Not used yet. Can be usefull for plugins or a later usage.
-- `description`: string - 'My description'. Not used yet. Can be usefull for plugins or a later usage.
-- `author`: string - 'Me'. Not used yet. Can be usefull for plugins or a later usage.
-- `branch`: string - 'master'. What Github branch to used when updating the template. Keep 'master' for stable releases or use 'develop' if you want to try new features before everyone else (⚠ Use with caution, it may contain more bugs than master).
+| key | type | default | description|
+|-----|------|---------|------------|
+| name | string | 'My name' | Your project name |
+| description | string | 'My description' | Your project description |
+| author | string | 'Me' | Your name |
+| version | string | '0.0.0' | The current version of your project |
 
 ## flags
 Read more at [Flags](/configuration/flags)
 
 ## build
-Read more at [Build](/build/)
+| key | type | default | description|
+|-----|------|---------|------------|
+| dir | string | Current active directory | The directory to use as source for the build |
+| asar | boolean | true | Whether or not packaging game sources inside an asar compressed file |
+| out | string | 'dist' | The directory where to put your builds |
+| overwrite | boolean | true | Whether or not to override builds already present in the `out` directory |
+| extraResource | Array\<string\> | [] | Extra resources that needs to be included alongside your game files |
+| ignore | Array\<string\> | preview*, node_modules\/greenworks, node_modules\/app-builder-bin, node_modules\/app-builder-lib | Path from `dir` to be excluded from the build |
+
+The whole build configuration is available at the [electron-packager official documentation](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md).
+
+For more information on the building process, read more at [Build](/build/)
   
 ## Other
-`type`: string - null. Has no usage yet.
+| key | type | default | description|
+|-----|------|---------|------------|
+| electron | string | 4.0.0 | Override build and preview electron version
+
+::: tip Note
+The mention to *dev* or *prod* means that for:
+- *dev*, the value is true when previewing, false after building.
+- *prod*, the value is false when previewing, true after building.
+:::

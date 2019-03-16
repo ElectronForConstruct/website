@@ -61,7 +61,6 @@ module.exports = {
           [ '/configuration/', 'Introduction' ],
           [ '/configuration/general', 'General' ],
           [ '/configuration/flags', 'Flags' ],
-          [ '/configuration/build', 'Build' ],
         ],
       },
       {
@@ -78,8 +77,10 @@ module.exports = {
           [ '/plugins/using-plugins', 'Using plugins' ],
           [ '/plugins/sdk', 'Using the SDK' ],
           [ '/plugins/available-plugins', 'Available plugins' ],
-          [ '/plugins/plugin-efc-itch', '@electronforconstruct/plugin-efc-itch' ],
-          [ '/plugins/plugin-efc-greenworks', '@electronforconstruct/plugin-efc-greenworks' ],
+          [ '/plugins/itch', 'Itch.io plugin' ],
+          [ '/plugins/greenworks', 'Greenworks plugin' ],
+          [ '/plugins/installer', 'Installer plugin' ],
+          [ '/plugins/rich-presence', 'Discord rich presence plugin' ],
         ],
       },
 //      {

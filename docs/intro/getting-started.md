@@ -6,10 +6,10 @@ People that are not familiar with the command line or editing configuration file
 You also need [**Node.js (including npm)**](https://nodejs.org/en/)
 
 ## Installation
-Once Node.js installed and configured (both `node` and `npm` should be available through the path), you must install the **cli** tool.
+Once Node.js installed and configured (both `node` and `npm` should be available through the PATH), you must install the **cli** tool.
 
 ```bash
-npm i -g @electronforconstruct/cli
+npm i -g @efc/cli
 ```
 
 <br>

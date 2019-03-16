@@ -6,8 +6,8 @@ First, you need to export your project using C2.
 
 1. Open the "Export" dialog
 2. Select **HTML5**
-3. Export your game to the **app** folder of your Electron project
-4. Run the `efc` command and select "Build"
+3. Export your game to the root of the folder of your Electron project
+4. Run the `efc` command and select "Build" or directly `efc build`
 
 ## Construct 3
 
@@ -18,8 +18,8 @@ First, you need to export your project using C3.
 1. Open the "Export" dialog
 2. Select **HTML5**
 3. Download the exported zip 
-4. Extract its content to the **app** folder of your Electron project
-5. Run the `efc` command and select "Build"
+4. Extract its content to the root of the folder of your Electron project
+5. Run the `efc` command and select "Build" or directly `efc build`
 
 ___
 
