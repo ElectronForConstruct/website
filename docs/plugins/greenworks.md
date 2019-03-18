@@ -15,6 +15,7 @@ This addon support configuration under the `greenworks` key
 | steamId | number | 480 | You game steamId. Default to 480 as it's a steam default game that everyone own. |
 | sdkPath | string | "steam_sdk" | Path to your [steam sdk](https://partner.steamgames.com/downloads/list) | 
 | localGreenworksPath | string | null | Path to the **root** of your [local greenworks installation](https://github.com/greenheartgames/greenworks) |
+| forceClean | boolean | false | Force the greenworks plugin to be setup even if it's already in place |
 
 ## Using this plugin
 You can manually configure greenworks using the "Configure greenworks" command. However, it automatically run **before** the **build** command.

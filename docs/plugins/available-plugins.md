@@ -15,6 +15,7 @@
 - [greenworks](/plugins/greenworks)
 - [installer](/plugins/installer)
 - [rich-presence](/plugins/rich-presence)
+- [minifier](/plugins/minifier)
 
 ## Unverified plugins
 You can find all plugins for efc [here](https://npmsearch.com/?q=plugin-efc)

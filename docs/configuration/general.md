@@ -54,6 +54,7 @@ Read more at [Flags](/configuration/flags)
 | overwrite | boolean | true | Whether or not to override builds already present in the `out` directory |
 | extraResource | Array\<string\> | [] | Extra resources that needs to be included alongside your game files |
 | ignore | Array\<string\> | preview*, node_modules\/greenworks, node_modules\/app-builder-bin, node_modules\/app-builder-lib | Path from `dir` to be excluded from the build |
+| icon | string | projectDirectory/build | Path to the icon that should be used for the final executable
 
 The whole build configuration is available at the [electron-packager official documentation](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md).
 
@@ -62,7 +63,9 @@ For more information on the building process, read more at [Build](/build/)
 ## Other
 | key | type | default | description|
 |-----|------|---------|------------|
-| electron | string | 4.0.0 | Override build and preview electron version
+| electron | string | 3.1.6 | Override build and preview electron version
+| errorLogging | boolean | true | Whether or not to send us error reports
+| singleInstance | boolean | false | If true, only one instance of your application can be run at the same time
 
 ::: tip Note
 The mention to *dev* or *prod* means that for:
