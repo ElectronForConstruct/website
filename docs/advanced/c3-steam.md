@@ -1,7 +1,7 @@
 # Steam integration with Construct 3
 > [BETA] - Written by MikalDev
 
-See the greenworks plugin [documentation](https://efc.armaldio.xyz/) on adding greenworks keys to the project config.js.
+See the greenworks plugin [documentation](/plugins/greenworks) on adding greenworks keys to the project config.js.
 
 Currently use Electron 3.1.6 (Electron 4.x have had intermittent crash errors with greenworks/steam).
 
@@ -34,7 +34,7 @@ In `config.js`, there is a special key `switches`, wich allow you to pass differ
 In the case of not moving or rendering every frame, the overlay will be buggy. Place a small (1x1 px) rotating sprite, for example in a corner. That will fix the overlay being not corectly responsive.
 :::
 
-For more infos on switches, head over to the Electron [documentation]().
+For more infos on switches, head over to the Electron [documentation](/configuration/flags).
 
 ## Using greenworks, two methods
 
