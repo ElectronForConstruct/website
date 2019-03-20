@@ -71,7 +71,7 @@ module.exports = {
         ],
       },
       {
-        title   : 'Plugins',
+        title   : 'CLI Plugins',
         children: [
           [ '/plugins/', 'Introduction' ],
           [ '/plugins/using-plugins', 'Using plugins' ],
@@ -83,10 +83,18 @@ module.exports = {
           [ '/plugins/rich-presence', 'Discord rich presence plugin' ],
         ],
       },
-//      {
-//        title   : 'FAQ',
-//        children: [],
-//      },
+      {
+        title   : 'Editor Plugins',
+        children: [
+          [ '/editor-plugins/', 'Introduction' ],
+          [ '/editor-plugins/construct-2', 'Construct 2' ],
+          [ '/editor-plugins/construct-3', 'Construct 3' ],
+        ],
+      },
+      {
+        title   : 'FAQ',
+        children: [],
+      },
     ],
   },
   plugins    : [
