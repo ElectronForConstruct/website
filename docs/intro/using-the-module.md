@@ -57,8 +57,8 @@ Your browser does not support the video tag.
 ## Previewing a Construct project
 
 To preview a Construct project, you can use the `efc preview` command. \
-Under Contruct 2, start a regular preview then paste the link inside the cli.
-Under Construct 3, you need to use the remote preview url. (Found under the preview menu). \
+Under Contruct 2, start a regular preview then paste the link inside the cli. \
+Under Construct 3, you need to use the remote preview url. (Found under the preview menu).
 
 <!--
 <video width="100%" controls>
