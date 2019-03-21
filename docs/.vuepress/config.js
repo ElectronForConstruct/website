@@ -11,6 +11,10 @@ module.exports = {
       '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });' ],
   ],
   themeConfig: {
+    repo: 'ElectronForConstruct/website',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    docsDir: 'docs',
     displayAllHeaders: true,
     nav              : [
       {
