@@ -6,6 +6,7 @@ This plugin aims to minify your project sources to reduce the final size and pre
 Please refer to [this section](/plugins/using-plugins.html#installing-a-plugin) to get help on how to install this plugin.
 
 ## Configuration
+The entry to add to the `plugins` key to enable it is `minifier`
 This addon support configuration under the `minify` key
 
 | key | type | default | description |

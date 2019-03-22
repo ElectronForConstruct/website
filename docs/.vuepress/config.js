@@ -82,6 +82,7 @@ module.exports = {
           [ '/plugins/sdk', 'Using the SDK' ],
           [ '/plugins/available-plugins', 'Available plugins' ],
           [ '/plugins/itch', 'Itch.io plugin' ],
+          [ '/plugins/minifier', 'Minifier plugin' ],
           [ '/plugins/greenworks', 'Greenworks plugin' ],
           [ '/plugins/installer', 'Installer plugin' ],
           [ '/plugins/rich-presence', 'Discord rich presence plugin' ],
@@ -97,7 +98,9 @@ module.exports = {
       },
       {
         title   : 'FAQ',
-        children: [],
+        children: [
+          ['/faq/', 'FAQ']
+        ],
       },
     ],
   },
