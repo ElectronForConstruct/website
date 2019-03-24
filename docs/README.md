@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /icon.png
+heroImage: /icon.webp
 heroText: ElectronForConstruct
 tagline: Package your app with Electron instead of NW.js and make your game development a breeze
 actionText: Get Started →
