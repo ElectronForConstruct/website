@@ -67,18 +67,6 @@ For more information on the building process, read more at [Build](/build/)
 | errorLogging | boolean | true | Whether or not to send us error reports
 | singleInstance | boolean | false | If true, only one instance of your application can be run at the same time
 
-## 'crash-reporter' (note quotes are required for this key)
-| key | type | default | description|
-|-----|------|---------|------------|
-| enable | boolean | false | Enable Crash Reporter Module
-| productName | string | "" | Project Name
-| companyName | string | "" | Company Name
-| submitURL | string | "" | URL to submit crash report to
-| uploadToServer | boolean | false | Upload crash report to submitURL
-
-This is module useful for reporting crashes from users to a cloud based crash report server. Note due to data being gathered and sent from a users platform, a GDPR notice is likely required. Developers should review their GDPR policy. This has been sucessfully tested with the [backtrace.io service](https://backtrace.io). After creating a backtrace.io account, create a project based on Electron, upload the [Electron symbols](https://github.com/electron/electron/releases) for the version of Electron being used and change the submitURL to point at your project's specific upload backtrace.io URL (this URL is available on the backtrace.io project site.)
-
-
 ::: tip Note
 The mention to *dev* or *prod* means that for:
 - *dev*, the value is true when previewing, false after building.

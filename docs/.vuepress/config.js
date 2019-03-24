@@ -86,6 +86,7 @@ module.exports = {
           [ '/plugins/greenworks', 'Greenworks plugin' ],
           [ '/plugins/installer', 'Installer plugin' ],
           [ '/plugins/rich-presence', 'Discord rich presence plugin' ],
+          [ '/plugins/crash-reporter', 'Crash reporter plugin' ],
         ],
       },
       {
