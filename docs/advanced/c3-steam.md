@@ -14,29 +14,25 @@ Right click on the entry, go to properties, click on **Set Set Launch Options**.
 
 ### Running executable
 - Must have Steam running and user logged in
-- Must have valid steam_appid.txt
-- Must launch your executable from Steam for overlay to work (currently steam/greenworks/electron only have working overlay on Windows)
+- Must have valid steam_appid.txt if not installing _and_ running application through steam.
+  - WindowsOS, the steam_appid.txt should be directory the executable is being launched from.
+  - MacOS, the steam_appid.txt should be in the users home directory, and the application should be launched from mygame.app/Contents/MacOS/mygame
+  - If the game is installed through Steam and Steam servers, no steam_appid.txt is required. 
+- You must launch your executable from Steam for the overlay to work
 
 ## The overlay is not working!
 
+Steam overlay currently only works with Windows and Greenworks/Electron/nw.js.
 Sometimes, you need to configure more things for the overlay to work.
-In `config.js`, there is a special key `switches`, wich allow you to pass different Chrome/Electron switches to your app. In our case: 
 
-```json
-{
-    "switches": {
-        "in-process-gpu",
-    }
-}
-```
+The following switch must be added to the exe application command line:
+`--in-process-gpu` This can be added to the application's Steam launch options on Steam server's application configuration site. For example `mygame.exe --in-process-gpu`
 
 ::: tip NOTE
 In the case of not moving or rendering every frame, the overlay will be buggy. Place a small (1x1 px) rotating sprite, for example in a corner. That will fix the overlay being not corectly responsive.
 :::
 
-For more infos on switches, head over to the Electron [documentation](/configuration/flags).
-
-## Using greenworks, two methods
+## Using greenworks to access the Steamworks APIs, two methods
 
 ### Use The Greengrinds plugin (includes example project)
 [Greengrinds Addon](https://www.construct.net/en/make-games/addons/244/greengrinds) 
