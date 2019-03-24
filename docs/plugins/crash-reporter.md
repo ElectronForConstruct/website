@@ -2,7 +2,7 @@
 
 This is module useful for reporting crashes from users to a cloud based crash report server.
 
-:::note 
+::: tip
 Due to data being gathered and sent from a users platform, a GDPR notice is likely required. \ 
 Developers should review their GDPR policy.
 ::: 
