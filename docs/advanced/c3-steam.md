@@ -3,26 +3,30 @@
 
 See the greenworks plugin [documentation](/plugins/greenworks) on adding greenworks keys to the project config.js.
 
-Currently use Electron 3.1.6 (Electron 4.x have had intermittent crash errors with greenworks/steam).
-
 ## Preview
 
 While previewing using `efc`, you will now have access to Greenworks features. Though, the overlay will only work as long as you launch Electron through Steam.
 
-To do so, you need to make use of the `preview` executable located in your app. Go to your steam app, add a **non-steam** game and select this executable.
-Right click on the entry, go to properties, click on **Set Set Launch Options**. If using Construct 3, enter the remote review url, otherwise enter the Construct 2 regular preview url. Finally, launch your app from steam to have all the benefits: Testing greenworks, live-reload and overlay.
+To do so, you need to make use of the `preview` executable located in your app (if not already there, you can downlaod it from [there](https://github.com/ElectronForConstruct/preview/releases) and place it inside your project folder). Go to your steam app, add a **non-steam** game and select this executable.
+Right click on the entry, go to properties, click on **Set Set Launch Options**. If using Construct 3, enter the remote preview url, otherwise enter the Construct 2 regular preview url. Finally, launch your app from steam to have all the benefits: Testing greenworks, live-reload and overlay.
 
-### Running executable
+### Running the executable
+You: 
 - Must have Steam running and user logged in
-- Must have valid steam_appid.txt if not installing _and_ running application through steam.
-  - WindowsOS, the steam_appid.txt should be directory the executable is being launched from.
-  - MacOS, the steam_appid.txt should be in the users home directory, and the application should be launched from mygame.app/Contents/MacOS/mygame
-  - If the game is installed through Steam and Steam servers, no steam_appid.txt is required. 
-- You must launch your executable from Steam for the overlay to work
+- Must have valid steam_appid.txt: efc should already place it alongside your executable
+- Must launch your executable from Steam for the overlay to work
+
+::: warning
+On MacOS, the steam_appid.txt should be in the user's **home** directory, and the application should be launched from mygame.app/Contents/MacOS/mygame.
+:::
+
+::: note
+If the game is installed through Steam and Steam servers, no steam_appid.txt is required. 
+:::
 
 ## The overlay is not working!
 
-Steam overlay currently only works with Windows and Greenworks/Electron/nw.js.
+Steam overlay currently only works with Windows and Greenworks/Electron/NW.js.
 Sometimes, you need to configure more things for the overlay to work.
 
 The following switch must be added to the exe application command line:
