@@ -1,14 +1,11 @@
 module.exports = {
-  title      : 'ElectronForConstruct',
-  description: 'A documentation website about the ElectronForContruct tool. Install it now and get the best performances!',
+  title      : 'Electron for Construct',
+  description: 'A documentation website about the ElectronForContruct tool. Install it now and get the best performances for your games!',
   head       : [
     [ 'link', {
       rel : 'icon',
       href: '/favicon.ico',
     } ],
-    [ 'script', { src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' } ],
-    [ 'script', {},
-      '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-4966496851511152",  enable_page_level_ads: true });' ],
   ],
   themeConfig: {
     repo: 'ElectronForConstruct',
@@ -109,5 +106,6 @@ module.exports = {
         'ga': 'UA-85914929-3',
       },
     ],
+    '@vuepress/nprogress'
   ],
 };
