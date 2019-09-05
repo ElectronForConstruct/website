@@ -9,7 +9,7 @@ You also need [**Node.js (including npm)**](https://nodejs.org/en/)
 Once Node.js installed and configured (both `node` and `npm` should be available through the PATH), you must install the **cli** tool.
 
 ```bash
-npm i -g @efc/cli
+npm i -g @cyn/cli
 ```
 
 <br>
