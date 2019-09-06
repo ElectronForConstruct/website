@@ -13,7 +13,7 @@ module.exports = {
     editLinks        : true,
     editLinkText     : 'Help us improve this page!',
     docsDir          : 'docs',
-    displayAllHeaders: true,
+    displayAllHeaders: false,
     nav              : [
       {
         text: 'Home',
@@ -39,15 +39,18 @@ module.exports = {
     sidebar          : [
       {
         title   : 'Guide',
+        path: '/intro/',
         children: [
           '/intro/',
           '/intro/getting-started',
-          '/intro/project-structure',
           '/intro/using-the-module',
+          '/intro/project-structure',
+          '/intro/cyn-folder',
         ],
       },
       {
         title   : 'Configuration',
+        path: '/configuration/',
         children: [
           '/configuration/',
           '/configuration/general',
@@ -56,6 +59,7 @@ module.exports = {
       },
       {
         title   : 'Build',
+        path: '/build/',
         children: [
           '/build/',
           '/build/building',
@@ -63,35 +67,32 @@ module.exports = {
       },
       {
         title   : 'CLI Plugins',
+        path: '/plugins/',
         children: [
           '/plugins/',
-          '/plugins/using-plugins',
-          '/plugins/sdk',
-          '/plugins/available-plugins',
-          '/plugins/itch',
-          '/plugins/minifier',
-          '/plugins/greenworks',
-          '/plugins/installer',
-          '/plugins/rich-presence',
-          '/plugins/crash-reporter',
         ],
       },
       {
         title   : 'Editor Plugins',
+        path: '/editor-plugins/',
         children: [
           '/editor-plugins/',
-          '/editor-plugins/construct-2',
-          '/editor-plugins/construct-3',
+          '/editor-plugins/construct2',
+          '/editor-plugins/construct3',
         ],
       },
       {
         title   : 'Recipes',
+        path: '/recipes/',
         children: [
-          '/recipes/construct3'
+          '/recipes/',
+          '/recipes/construct2',
+          '/recipes/construct3',
         ],
       },
       {
         title   : 'FAQ',
+        path: '/faq/',
         children: [
           '/faq/',
         ],

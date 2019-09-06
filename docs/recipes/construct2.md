@@ -62,22 +62,3 @@ Currently, no tests were made for Construct 2
 I'm sure people are wondering what's about Steam4C2.
 There is work in progress with the original author to support the plugin
 :::
-
-## Previewing a Construct project
-
-To preview a Construct project, you can use the `cyn preview` command. \
-Under Contruct 2, start a regular preview then paste the link inside the cli. \
-Under Construct 3, you need to use the remote preview url. (Found under the preview menu).
-
-<!--
-<video width="100%" controls>
-  <source src="/c3_preview.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
--->
-
-::: tip Tip from the official documentation
-
-" The game is no longer available from the provided URL as soon as you close the Remote Preview dialog. You can open the Remote Preview dialog to its own window to help keep it out of the way, by right-clicking on its caption and selecting Open to popup window. "
-
-:::
