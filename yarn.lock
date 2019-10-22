@@ -891,13 +891,6 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-nprogress@^1.0.0-alpha.47":
-  version "1.0.0-alpha.47"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.0.0-alpha.47.tgz#e0ad9cfac1d86b168a720045e3e96a01fe9f5190"
-  integrity sha512-EzdZ9GqT2H3PzCI4Ddp8EJh0bfe9EcbgIhKnl2fK7mH5RUt7RthDstn5pOhKpAjEC+e1NvH9NGd0pPzLsa0xcQ==
-  dependencies:
-    nprogress "^0.2.0"
-
 "@vuepress/plugin-nprogress@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.2.0.tgz#ff6166946a0b118a39a562acb57983529afce4d2"
