@@ -1,6 +1,6 @@
 # Flags
 
-The list of supported flags is available in the [Electron official documentation](https://electronjs.org/docs/api/chrome-command-line-switches#--ignore-connections-limitdomains)
+The list of supported flags is available in the [Electron official documentation](https://www.electronjs.org/docs/api/command-line-switches)
 
 All flags go under the switches key
 
