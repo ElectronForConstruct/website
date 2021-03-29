@@ -28,17 +28,6 @@ efc
 
 <br>
 
-<center>
-
-Translation made with
-<br>
-<br>
-[![PhraseApp](/phraseapp.png)](https://phraseapp.com/r/WwjDBYRNQyw)
-
-</center>
-
-<br>
-
 ::: danger NOTE
 YOU MUST OWN A CONSTRUCT 2 OR CONSTRUCT 3 LICENSE TO USE THIS TOOL. IT IS NOT ALLOWED TO EXPORT GAMES TO DESKTOP WITH THE FREE VERSION.
 :::
